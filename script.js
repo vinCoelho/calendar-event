@@ -23,7 +23,7 @@ console.log("summary", decodeURIComponent(summary));
 console.log("dtstart", decodeURIComponent(dtstart));
 console.log("dtend", decodeURIComponent(dtend));
 
-if (md.is('iPhone')) {
+if (md.mobile()) {
   const encodedSummary = encodeURIComponent(summary);
   const encodedLocation = encodeURIComponent(loc);
   const encodedDescription = encodeURIComponent(description);
@@ -31,6 +31,8 @@ if (md.is('iPhone')) {
   const encodedDTEnd = encodeURIComponent(dtend);
 
   const link = `data:text/calendar;charset=utf-8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ADTSTART:${encodedDTStart}%0ADTEND:${encodedDTEnd}%0ASUMMARY:${encodedSummary}%0ADESCRIPTION:${encodedDescription}%0ALOCATION:${encodedLocation}%0AEND:VEVENT%0AEND:VCALENDAR`;
+
+  decodeURIComponent(link);
   
   window.location.href = link;
 } else {
