@@ -28,7 +28,7 @@ const encodedDescription = encodeURIComponent(description);
 const encodedDTStart = encodeURIComponent(dtstart);
 const encodedDTEnd = encodeURIComponent(dtend);
 
-if (md.is('iPhone')) {
+if (true) {
   const link = `data:text/calendar;charset=utf-8,BEGIN:VCALENDAR
 VERSION:2.0
 X-WR-CALNAME:Reserva Veículo
@@ -53,11 +53,11 @@ END:VCALENDAR`;
 // } else if (!md.mobile()) {
 //   window.location.href = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${decodeURIComponent(summary)}&dates=${decodeURIComponent(dtstart)}/${decodeURIComponent(dtend)}&details=${decodeURIComponent(description)}&location=${decodeURIComponent(loc)}&sf=true&output=xml`;
 }
-else {
-  const link = `data:text/calendar;charset=utf-8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ADTSTART:${encodedDTStart}%0ADTEND:${encodedDTEnd}%0ASUMMARY:${encodedSummary}%0ADESCRIPTION:${encodedDescription}%0ALOCATION:${encodedLocation}%0AEND:VEVENT%0AEND:VCALENDAR`;
+// else {
+//   const link = `data:text/calendar;charset=utf-8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ADTSTART:${encodedDTStart}%0ADTEND:${encodedDTEnd}%0ASUMMARY:${encodedSummary}%0ADESCRIPTION:${encodedDescription}%0ALOCATION:${encodedLocation}%0AEND:VEVENT%0AEND:VCALENDAR`;
 
-  window.location.href = link;
-}
+//   window.location.href = link;
+// }
 
 
 // https://vincoelho.github.io/calendar-event/#/event#/ROD%20MG%2010%20KM%2039%20-%20-%20AEROPORTO%20INT.%20TANCREDO%20NEVES%20-%20CONFIS%20-%20MG#/-%20Retirada:%2017/03/2023%20às%2018:39%0A-%20Devolução:%2018/03/2023%20às%2010:00#/Reserva%20Veículo%20-%20Unidas#/20230622T230000#/20230623T230000
